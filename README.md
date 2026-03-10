@@ -2,7 +2,7 @@
 
 # mibi 🤖
 
-### AI-powered HR assistant for modern teams
+### AI-powered HR platform for modern teams
 
 Gestão de Recursos Humanos com **multi-tenancy, automação e inteligência artificial**.
 
@@ -21,8 +21,10 @@ A plataforma permite que múltiplas empresas utilizem o sistema de forma **isola
 Principais capacidades:
 
 - gestão de colaboradores
-- ciclos de feedback
-- revisão automática de feedback por IA
+- ciclos de feedback com revisão automática por IA
+- recuperação de senha com token seguro
+- convite de colaboradores por e-mail
+- módulo de recrutamento *(em desenvolvimento)*
 - base de conhecimento de RH
 - multi-tenancy real via PostgreSQL schemas
 
@@ -72,7 +74,7 @@ Sistemas tradicionais misturam dados de empresas diferentes.
 
 mibi usa **multi-tenancy real**, com:
 
-- isolamento por schema
+- isolamento por schema PostgreSQL
 - segurança entre empresas
 - performance previsível
 
@@ -80,11 +82,7 @@ mibi usa **multi-tenancy real**, com:
 
 ## 📚 Conhecimento de RH fica espalhado
 
-Policies e boas práticas geralmente ficam em:
-
-- documentos
-- PDFs
-- intranet
+Policies e boas práticas geralmente ficam em documentos soltos, PDFs ou intranet.
 
 mibi centraliza isso em uma **base de conhecimento integrada à IA**.
 
@@ -96,15 +94,30 @@ mibi centraliza isso em uma **base de conhecimento integrada à IA**.
 
 - cadastro de colaboradores
 - perfil completo
-- permissões por tenant
-- controle de acesso
+- convite por e-mail com token seguro e prazo de expiração
+- permissões por tenant (admin / member)
+- controle de acesso por JWT
+
+---
+
+## 🔐 Autenticação completa
+
+mibi possui um fluxo de autenticação robusto:
+
+- **Login** com e-mail e senha
+- **Logout** com invalidação de sessão
+- **Convite de colaborador** — admin convida, colaborador define a própria senha via token
+- **Recuperação de senha** — fluxo completo com geração de token, envio de e-mail e redefinição segura
+- **Validação de token** — endpoint dedicado para verificar se um token de reset ainda é válido antes de exibir o formulário
+
+Todos os tokens de segurança (invite, reset) são armazenados com prazo de expiração (`timestamptz`) e são invalidados após o uso.
 
 ---
 
 ## 💬 Ciclo de feedback
 
-- criação de feedback
-- histórico
+- criação de feedback entre colaboradores
+- histórico completo
 - visibilidade controlada
 - revisão automática com IA
 
@@ -122,6 +135,21 @@ Capaz de:
 - aplicar guidelines da empresa
 
 **Neuralizar** é o comando que aciona a IA diretamente na interface, disponível tanto no desktop quanto no mobile.
+
+---
+
+## 🧑‍💼 Recrutamento *(em desenvolvimento)*
+
+O módulo de recrutamento está sendo construído para dar ao recrutador ferramentas de IA dentro do mesmo ambiente multi-tenant.
+
+Funcionalidades planejadas:
+
+- gerenciamento de vagas
+- pipeline de candidatos (triagem → entrevista → oferta)
+- análise de currículos com IA
+- geração de perguntas de entrevista personalizadas por vaga
+- scorecard de candidatos com sugestão de IA
+- histórico de processos seletivos por tenant
 
 ---
 
@@ -159,7 +187,7 @@ tenant_startup
 tenant_demo
 ```
 
-Tabelas principais:
+Tabelas principais por schema:
 
 ```
 collaborator
@@ -169,7 +197,7 @@ hr_config
 ai_learning
 ```
 
-O tenant é resolvido automaticamente via **subdomínio**.
+O tenant é resolvido automaticamente via **subdomínio** ou via header `x-tenant-subdomain` (utilizado em testes e em chamadas internas).
 
 ```
 empresa.rhlegal.com.br → tenant_empresa
@@ -201,7 +229,7 @@ ClaudeAI --> Anthropic
 
 A autenticação é tratada pelo **`proxy.js`**, que valida o JWT em cada requisição e redireciona para `/login` caso o token seja inválido ou ausente. Não utiliza o `middleware.js` padrão do Next.js.
 
-As migrações rodam apenas no schema `public`. Os schemas de tenant são criados e gerenciados pela função `provision_tenant()`.
+As migrações rodam apenas no schema `public`. Os schemas de tenant são criados e gerenciados pela função `provision_tenant_schema()`.
 
 ---
 
@@ -210,18 +238,88 @@ As migrações rodam apenas no schema `public`. Os schemas de tenant são criado
 | Camada        | Tecnologia      |
 | ------------- | --------------- |
 | Frontend      | React           |
-| Framework     | Next.js         |
+| Framework     | Next.js (Pages Router) |
 | Backend       | Node.js         |
 | Banco (DEV)   | PostgreSQL local via Docker |
-| Banco (PRD)   | NeonDB (PostgreSQL) |
+| Banco (PRD)   | NeonDB (PostgreSQL serverless) |
 | Migrações     | node-pg-migrate |
 | Autenticação  | jose (JWT) via proxy.js |
 | Hash de senha | bcrypt          |
-| IA            | Claude Sonnet   |
-| Testes        | Jest            |
+| IA            | Claude Sonnet (Anthropic) |
+| Testes        | Jest (integração) + GitHub Actions CI |
 | Infra local   | Docker Compose  |
 | Hospedagem    | Vercel          |
 | DNS           | Registro.br     |
+
+---
+
+# 🧪 Testes
+
+mibi possui uma suíte de **testes de integração** que sobe o servidor Next.js real e um banco PostgreSQL local, executando chamadas HTTP reais contra a API.
+
+Rodar testes localmente:
+
+```bash
+npm test
+```
+
+Modo watch:
+
+```bash
+npm run test:watch
+```
+
+Suíte completa de integração:
+
+```bash
+npm run test:integration
+```
+
+O CI roda automaticamente via **GitHub Actions** em cada pull request, com:
+
+- PostgreSQL 16 em container Docker
+- migrations completas antes dos testes
+- build do Next.js (`next build`)
+- healthcheck via `wait-on` antes de iniciar os testes
+- ambiente idêntico ao de produção
+
+---
+
+# 🔌 API
+
+Principais endpoints:
+
+```
+GET  /api/v1/status
+
+POST /api/v1/auth/login
+POST /api/v1/auth/logout
+POST /api/v1/auth/forgot-password
+POST /api/v1/auth/reset-password
+GET  /api/v1/auth/validate-reset-token
+POST /api/v1/auth/accept-invite
+
+GET  /api/v1/collaborators
+POST /api/v1/collaborators
+PUT  /api/v1/collaborators/:id
+DEL  /api/v1/collaborators/:id
+
+GET  /api/v1/feedback
+POST /api/v1/feedback
+POST /api/v1/feedback/:id/review
+
+GET  /api/v1/config
+PUT  /api/v1/config
+
+POST /api/v1/tenant/provision
+GET  /api/v1/knowledge
+```
+
+Documentação interativa (Swagger):
+
+```
+/api/docs
+```
 
 ---
 
@@ -230,8 +328,8 @@ As migrações rodam apenas no schema `public`. Os schemas de tenant são criado
 Clone o projeto:
 
 ```bash
-git clone https://github.com/lucaskarsten/mibi.git
-cd mibi
+git clone https://github.com/lucaskarsten/mibi-core.git
+cd mibi-core
 ```
 
 Instale dependências:
@@ -254,60 +352,9 @@ npm run dev
 
 Esse comando automaticamente:
 
-1. sobe PostgreSQL via Docker
+1. sobe PostgreSQL via Docker Compose
 2. executa migrações
-3. inicia o Next.js
-
----
-
-# 🔌 API
-
-Principais endpoints:
-
-```
-GET  /api/v1/status
-POST /api/v1/auth/login
-
-GET  /api/v1/collaborators
-POST /api/v1/collaborators
-
-GET  /api/v1/feedback
-POST /api/v1/feedback
-POST /api/v1/feedback/:id/review
-
-GET  /api/v1/config
-PUT  /api/v1/config
-
-POST /api/v1/tenant/provision
-```
-
-Documentação completa:
-
-```
-/api-docs
-```
-
----
-
-# 🧪 Testes
-
-Rodar testes:
-
-```
-npm test
-```
-
-Modo watch:
-
-```
-npm run test:watch
-```
-
-Testes completos:
-
-```
-npm run test:integration
-```
+3. inicia o Next.js em modo desenvolvimento
 
 ---
 
@@ -315,12 +362,13 @@ npm run test:integration
 
 Próximas evoluções planejadas:
 
+- **Recrutamento** — vagas, pipeline de candidatos, análise de currículo com IA *(em desenvolvimento)*
 - SSO (Google / Microsoft)
 - dashboards analíticos de RH
 - ciclo completo de performance review
 - integrações Slack
 - webhooks
-- exportação de relatórios
+- exportação de relatórios em PDF
 
 ---
 
