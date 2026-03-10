@@ -121,6 +121,30 @@ Capaz de:
 - analisar linguagem
 - aplicar guidelines da empresa
 
+**Neuralizar** é o comando que aciona a IA diretamente na interface, disponível tanto no desktop quanto no mobile.
+
+---
+
+## 🎨 Interface responsiva
+
+A interface foi projetada para funcionar em qualquer dispositivo.
+
+No **desktop**:
+
+- sidebar fixa com navegação completa
+- topbar com nome do tenant
+- toggle de tema claro/escuro
+
+No **mobile**:
+
+- sidebar colapsável
+- topbar dedicada com acesso ao Neuralizar e toggle de tema
+- layout adaptado para telas pequenas
+
+O **tema claro/escuro** pode ser alternado a qualquer momento, com contraste reforçado no tema claro para melhor legibilidade.
+
+A tela de login conta com o efeito **neuralFadeIn** (brightness + blur) para uma entrada visual consistente com a identidade do produto.
+
 ---
 
 ## 🏢 Multi-tenancy
@@ -162,8 +186,8 @@ flowchart LR
 User --> Browser
 Browser --> NextJS
 
-NextJS --> Middleware
-Middleware --> TenantResolver
+NextJS --> ProxyJS
+ProxyJS --> TenantResolver
 
 TenantResolver --> PostgreSQL
 TenantResolver --> Auth
@@ -175,6 +199,10 @@ API --> PostgreSQL
 ClaudeAI --> Anthropic
 ```
 
+A autenticação é tratada pelo **`proxy.js`**, que valida o JWT em cada requisição e redireciona para `/login` caso o token seja inválido ou ausente. Não utiliza o `middleware.js` padrão do Next.js.
+
+As migrações rodam apenas no schema `public`. Os schemas de tenant são criados e gerenciados pela função `provision_tenant()`.
+
 ---
 
 # 🏗️ Stack
@@ -182,15 +210,18 @@ ClaudeAI --> Anthropic
 | Camada        | Tecnologia      |
 | ------------- | --------------- |
 | Frontend      | React           |
-| Framework     | Next.js 16      |
+| Framework     | Next.js         |
 | Backend       | Node.js         |
-| Banco         | PostgreSQL 16   |
+| Banco (DEV)   | PostgreSQL local via Docker |
+| Banco (PRD)   | NeonDB (PostgreSQL) |
 | Migrações     | node-pg-migrate |
-| Autenticação  | jose (JWT)      |
+| Autenticação  | jose (JWT) via proxy.js |
 | Hash de senha | bcrypt          |
 | IA            | Claude Sonnet   |
 | Testes        | Jest            |
 | Infra local   | Docker Compose  |
+| Hospedagem    | Vercel          |
+| DNS           | Registro.br     |
 
 ---
 
