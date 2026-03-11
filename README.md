@@ -32,6 +32,8 @@ Cada empresa opera em um **ambiente completamente isolado** — com seus própri
 
 O colaborador pergunta. A IA responde — com contexto real da empresa: benefícios, políticas internas, férias, folha de pagamento. Sem precisar abrir chamado ou esperar o RH.
 
+As respostas podem ser copiadas para o clipboard com um clique.
+
 ![Chat com IA](./screenshots/chat.png)
 
 ![Painel de Chat](./screenshots/Painel%20Chat.png)
