@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/lucaskarsten/mibi/main/screenshots/logo.png" alt="mibi" width="120" />
-
 # mibi
 
 ### Plataforma de RH com inteligência artificial para equipes modernas
@@ -10,110 +8,99 @@ Gestão de pessoas com **multi-tenancy real, automação inteligente e IA integr
 
 <br />
 
-[![Demo ao vivo](https://img.shields.io/badge/Demo%20ao%20vivo-→-6366f1?style=for-the-badge)](https://demonstracao.rh.lucaskarsten.com.br)
-[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
-[![Vercel](https://img.shields.io/badge/Vercel-deployed-black?style=for-the-badge&logo=vercel)](https://vercel.com)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-NeonDB-336791?style=for-the-badge&logo=postgresql)](https://neon.tech)
+[![Demo ao vivo](https://img.shields.io/badge/▶%20Demo%20ao%20vivo-demonstracao.rh.lucaskarsten.com.br-6366f1?style=for-the-badge)](https://demonstracao.rh.lucaskarsten.com.br)
 
 <br />
+
+![Login](./screenshots/Login.png)
 
 </div>
 
 ---
 
-## ✨ O que é o mibi?
+## O que é o mibi?
 
 **mibi** é uma plataforma de RH construída para empresas que querem usar inteligência artificial de forma prática no dia a dia de pessoas.
 
 Cada empresa opera em um **ambiente completamente isolado** — com seus próprios dados, agentes de IA personalizados e histórico exclusivo. Sem compartilhamento. Sem risco de vazamento entre organizações.
 
-> **Acesse agora:** [demonstracao.rh.lucaskarsten.com.br](https://demonstracao.rh.lucaskarsten.com.br)
-> `beatriz@demonstracao.com` · `lucas1`
+---
+
+## Funcionalidades
+
+### 🤖 Assistente de RH com IA
+
+O colaborador pergunta. A IA responde — com contexto real da empresa: benefícios, políticas internas, férias, folha de pagamento. Sem precisar abrir chamado ou esperar o RH.
+
+![Chat com IA](./screenshots/chat.png)
+
+![Painel de Chat](./screenshots/Painel%20Chat.png)
 
 ---
 
-## 🖼️ Visão geral
+### 👥 Gestão de Equipe
 
-<div align="center">
+Visão completa da sua equipe com controle de acesso granular. Suporte a tema claro e escuro.
 
-![Dashboard principal](./screenshots/dashboard.png)
-*Painel principal — visão consolidada da equipe*
+![Painel da Equipe](./screenshots/Painel%20Equipe.png)
 
-</div>
-
----
-
-## 🚀 Funcionalidades
-
-### 👥 Gestão de Colaboradores
-
-Onboarding simples, controle de acesso granular e perfis completos para cada pessoa da sua equipe.
+![Painel da Equipe - Tema Claro](./screenshots/Painel%20Equipe%20Tema%20Claro.png)
 
 - Convite por e-mail com link personalizado por empresa
-- Perfis individuais com histórico de atividades
 - Controle de papéis: `admin` e `member` por organização
+- Perfis individuais com histórico de atividades
 
-<div align="center">
-
-![Gestão de colaboradores](./screenshots/colaboradores.png)
-*Painel de gestão de colaboradores*
-
-</div>
+![Lista da Equipe](./screenshots/Equipe.png)
 
 ---
 
-### 🤖 Agentes de IA
+### 🎯 Módulo de Recrutamento
 
-Cada empresa tem seus próprios agentes configuráveis, baseados em templates globais que **evoluem continuamente** com o uso.
+Do processo seletivo ao parecer final, tudo em um único painel. A IA analisa candidatos, sugere perguntas de entrevista e gera avaliações estruturadas.
+
+![Recrutamento](./screenshots/recrutamento.png)
+
+- Processos seletivos com controle de status em tempo real
+- Cadastro e acompanhamento de candidatos
+- Painel de entrevista para recrutadores: notas, perguntas/respostas e cronômetro de sessão
+- Análise de candidatos por IA com parecer detalhado e recomendação final
+- Histórico completo vinculado ao candidato para comparações futuras
+
+---
+
+### ⚙️ Agentes de IA Configuráveis
+
+Cada empresa tem seus próprios agentes, baseados em templates globais que **evoluem continuamente** com o uso e os feedbacks da equipe.
+
+![Agentes](./screenshots/agentes.png)
 
 | Agente | O que faz |
 |---|---|
 | **Assistente de RH** | Responde dúvidas sobre benefícios, férias, políticas internas e folha de pagamento |
 | **Assistente de Recrutamento** | Analisa candidatos, sugere perguntas e gera pareceres estruturados |
 
-Os agentes aprendem com os feedbacks dos colaboradores via um sistema de **digest anônimo** — ficam mais inteligentes com o tempo, sem comprometer a privacidade.
-
-<div align="center">
-
-![Agente de IA](./screenshots/agente-rh.png)
-*Assistente de RH em ação — respostas contextualizadas para sua equipe*
-
-</div>
+Os agentes aprendem via um sistema de **digest anônimo** — ficam mais inteligentes com o tempo, sem comprometer a privacidade.
 
 ---
 
-### 🎯 Módulo de Recrutamento
+### 🔧 Configurações por Empresa
 
-Do processo seletivo ao parecer final, tudo em um único painel. A IA analisa candidatos, sugere perguntas de entrevista e gera avaliações estruturadas — economizando horas do seu time de recrutamento.
+Cada organização controla seu próprio ambiente: agentes, integrações e preferências.
 
-- Processos seletivos com controle de status em tempo real
-- Cadastro e acompanhamento de candidatos
-- **Painel de entrevista** para recrutadores: notas, perguntas/respostas e cronômetro de sessão
-- Análise de candidatos por IA com parecer detalhado e recomendação final
-- Histórico completo vinculado ao candidato para comparações futuras
-
-<div align="center">
-
-![Módulo de recrutamento](./screenshots/recrutamento.png)
-*Painel de recrutamento — do processo seletivo ao parecer da IA*
-
-![Painel de entrevista](./screenshots/entrevista.png)
-*Painel de entrevista ao vivo — notas e cronômetro integrados*
-
-</div>
+![Configurações](./screenshots/configura%C3%A7%C3%B5es.png)
 
 ---
 
 ### 🏢 Multi-tenancy Real
 
-Arquitetura de isolamento total: cada empresa possui um **schema dedicado no PostgreSQL**. Não existe camada de compartilhamento — os dados da sua empresa não se misturam com os de nenhuma outra organização.
+Cada empresa possui um **schema dedicado no PostgreSQL** — não há camada de compartilhamento. Os dados da sua empresa não se misturam com os de nenhuma outra organização.
 
 ```
 empresa_a.rh.app  →  schema isolado da empresa A
 empresa_b.rh.app  →  schema isolado da empresa B
 ```
 
-Isso significa privacidade de dados por design, não por configuração.
+Privacidade de dados por design, não por configuração.
 
 ---
 
@@ -131,22 +118,7 @@ Isso significa privacidade de dados por design, não por configuração.
 
 ---
 
-## 🛠️ Stack técnica
-
-| Camada | Tecnologia |
-|---|---|
-| **Frontend / Backend** | Next.js 15 · JavaScript |
-| **Roteamento / Proxy** | `proxy.js` (custom, sem middleware.js) |
-| **Banco de dados (DEV)** | PostgreSQL local |
-| **Banco de dados (PRD)** | NeonDB (serverless Postgres) |
-| **Hospedagem** | Vercel |
-| **Domínio** | Registro.br |
-
----
-
-## ⚡ Acesso à demo
-
-Explore todas as funcionalidades em nosso ambiente de demonstração:
+## ⚡ Acesse a demo
 
 ```
 URL:   https://demonstracao.rh.lucaskarsten.com.br
@@ -156,8 +128,17 @@ Senha: lucas1
 
 ---
 
-## 📬 Contato
+## 🛠️ Stack
+
+| Camada | Tecnologia |
+|---|---|
+| **Frontend / Backend** | Next.js · JavaScript |
+| **Proxy / Roteamento** | `proxy.js` |
+| **Banco de dados (DEV)** | PostgreSQL local |
+| **Banco de dados (PRD)** | NeonDB |
+| **Hospedagem** | Vercel |
+| **Domínio** | Registro.br |
+
+---
 
 Desenvolvido por **Lucas Karsten**
-
-Tem interesse no produto ou quer conversar sobre integrações? Entre em contato.
