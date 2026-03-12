@@ -8,7 +8,7 @@ Gestão de pessoas com **multi-tenancy real, automação inteligente e IA integr
 
 <br />
 
-[![Demo ao vivo](https://img.shields.io/badge/▶%20Demo%20ao%20vivo-demonstracao.rh.lucaskarsten.com.br-6366f1?style=for-the-badge)](https://demonstracao.rh.lucaskarsten.com.br)
+[![Demo ao vivo](https://img.shields.io/badge/%E2%96%B6%20Demo%20ao%20vivo-demonstracao.rh.lucaskarsten.com.br-6366f1?style=for-the-badge)](https://demonstracao.rh.lucaskarsten.com.br)
 
 <br />
 
@@ -32,7 +32,7 @@ Cada empresa opera em um **ambiente completamente isolado** — com seus própri
 
 O colaborador pergunta. A IA responde — com contexto real da empresa: benefícios, políticas internas, férias, folha de pagamento. Sem precisar abrir chamado ou esperar o RH.
 
-As respostas podem ser copiadas para o clipboard com um clique.
+As respostas podem ser copiadas para o clipboard com um clique. O feedback (👍 / 👎) é dado diretamente em cada mensagem — membros enviam na hora, gestores e recrutadores podem adicionar um comentário antes.
 
 ![Chat com IA](./screenshots/chat.png)
 
@@ -50,6 +50,7 @@ Visão completa da sua equipe com controle de acesso granular. Suporte a tema cl
 
 - Convite por e-mail com link personalizado por empresa
 - Controle de papéis: `admin` e `member` por organização
+- Flag de recrutador para acesso ao módulo de seleção
 - Perfis individuais com histórico de atividades
 
 ![Lista da Equipe](./screenshots/Equipe.png)
@@ -58,15 +59,40 @@ Visão completa da sua equipe com controle de acesso granular. Suporte a tema cl
 
 ### 🎯 Módulo de Recrutamento
 
-Do processo seletivo ao parecer final, tudo em um único painel. A IA analisa candidatos, sugere perguntas de entrevista e gera avaliações estruturadas.
+Do processo seletivo ao parecer final, tudo em um único painel.
 
 ![Recrutamento](./screenshots/recrutamento.png)
 
-- Processos seletivos com controle de status em tempo real
-- Cadastro e acompanhamento de candidatos
-- Painel de entrevista para recrutadores: notas, perguntas/respostas e cronômetro de sessão
-- Análise de candidatos por IA com parecer detalhado e recomendação final
-- Histórico completo vinculado ao candidato para comparações futuras
+- Processos seletivos com controle de status em tempo real (`Aberto`, `Em espera`, `Encerrado`, `Cancelado`)
+- Cadastro e acompanhamento de candidatos com histórico completo
+- Filtros por status com visualização instantânea
+- Botão **Entrevistar** na lista de candidatos — abre o painel de entrevista diretamente
+
+#### 🎬 Painel de Entrevista em Tempo Real
+
+Ambiente dedicado para conduzir entrevistas de forma estruturada.
+
+**Abas organizadas por contexto:**
+
+| Aba | Para quê serve |
+|---|---|
+| **Geral** | Visão completa do candidato + análise de currículo gerada por IA |
+| **Anotações** | Notas livres e observações comportamentais durante a entrevista |
+| **Comportamento** | Registro de perguntas e respostas de forma estruturada |
+| **Análise de Currículo** | Parecer detalhado e recomendação final gerada pela IA |
+
+**O que o recrutador tem à disposição:**
+
+- **Cronômetro de sessão** com start/pause/reset e alerta visual aos 45 minutos
+- **Notas de avaliação** por dimensão: técnica, comunicação, cultura, experiência e motivação — salvas automaticamente
+- **Modo de preparação** — permite registrar perguntas e pontos-chave antes da entrevista começar
+- **Modal de conclusão** — o recrutador preenche a avaliação final antes de confirmar o encerramento
+- **Export** — gera relatório completo da entrevista para impressão/PDF ou cópia direta
+- Ao concluir, o candidato passa automaticamente para o status **Entrevistado**
+
+**Análise de candidatos por IA:**
+
+A IA analisa o perfil do candidato no contexto da vaga específica — gerando um parecer com pontos fortes, riscos e recomendação final. O histórico de todas as entrevistas fica vinculado ao candidato para comparações futuras.
 
 ---
 
@@ -81,7 +107,7 @@ Cada empresa tem seus próprios agentes, baseados em templates globais que **evo
 | **Assistente de RH** | Responde dúvidas sobre benefícios, férias, políticas internas e folha de pagamento |
 | **Assistente de Recrutamento** | Analisa candidatos, sugere perguntas e gera pareceres estruturados |
 
-Os agentes aprendem via um sistema de **digest anônimo** — ficam mais inteligentes com o tempo, sem comprometer a privacidade.
+Os agentes aprendem via um sistema de **digest anônimo** — ficam mais inteligentes com o tempo, sem comprometer a privacidade. O painel de cada agente exibe os feedbacks mais recentes com paginação.
 
 ---
 
@@ -112,8 +138,11 @@ Privacidade de dados por design, não por configuração.
 |---|---|
 | Assistente de RH com IA | ✅ Em produção |
 | Módulo de recrutamento | ✅ Em produção |
-| Painel de entrevista em tempo real | 🔜 Em desenvolvimento |
+| Painel de entrevista em tempo real | ✅ Em produção |
 | Comparação de candidatos por IA | 🔜 Em breve |
+| Upload de currículo com extração automática | 🔜 Em breve |
+| Resumo de currículo por IA | 🔜 Em breve |
+| Sugestão de perguntas por IA | 🔜 Em breve |
 | Agente do colaborador (feedbacks internos) | 📅 v2 |
 | SSO (Google / Microsoft) | 📅 v2 |
 | Dashboards analíticos | 📅 v2 |
@@ -127,6 +156,8 @@ URL:   https://demonstracao.rh.lucaskarsten.com.br
 Email: beatriz@demonstracao.com
 Senha: lucas1
 ```
+
+> Beatriz é recrutadora na empresa de demonstração — tem acesso ao painel de recrutamento completo, incluindo processos seletivos ativos, candidatos em diferentes etapas e o painel de entrevista com dados ricos já preenchidos para exploração.
 
 ---
 
