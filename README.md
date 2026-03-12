@@ -72,6 +72,10 @@ Do processo seletivo ao parecer final, tudo em um único painel.
 
 Ambiente dedicado para conduzir entrevistas de forma estruturada.
 
+![Dashboard Geral](./screenshots/dashboard%20geral.png)
+
+![Dashboard Geral](./screenshots/dashboard%20geral%20(2).png)
+
 **Abas organizadas por contexto:**
 
 | Aba | Para quê serve |
@@ -80,6 +84,8 @@ Ambiente dedicado para conduzir entrevistas de forma estruturada.
 | **Anotações** | Notas livres e observações comportamentais durante a entrevista |
 | **Comportamento** | Registro de perguntas e respostas de forma estruturada |
 | **Análise de Currículo** | Parecer detalhado e recomendação final gerada pela IA |
+
+![Dashboard Comportamental](./screenshots/dashboard%20comportamental.png)
 
 **O que o recrutador tem à disposição:**
 
@@ -93,6 +99,8 @@ Ambiente dedicado para conduzir entrevistas de forma estruturada.
 **Análise de candidatos por IA:**
 
 A IA analisa o perfil do candidato no contexto da vaga específica — gerando um parecer com pontos fortes, riscos e recomendação final. O histórico de todas as entrevistas fica vinculado ao candidato para comparações futuras.
+
+![Avaliação do Candidato](./screenshots/avalia%C3%A7%C3%A3o%20candidato.png)
 
 ---
 
@@ -151,13 +159,13 @@ Privacidade de dados por design, não por configuração.
 
 ## ⚡ Acesse a demo
 
-```
-URL:   https://demonstracao.rh.lucaskarsten.com.br
-Email: beatriz@demonstracao.com
-Senha: lucas1
-```
+URL: `https://demonstracao.rh.lucaskarsten.com.br` · Senha de todos os usuários: `lucas1`
 
-> Beatriz é recrutadora na empresa de demonstração — tem acesso ao painel de recrutamento completo, incluindo processos seletivos ativos, candidatos em diferentes etapas e o painel de entrevista com dados ricos já preenchidos para exploração.
+| Perfil | Email | O que explorar |
+|---|---|---|
+| **Admin** | `ana@demonstracao.com` | Gestão de equipe, configurações, agentes de IA e base de conhecimento |
+| **Membro** | `rafael@demonstracao.com` | Chat com o assistente de RH, feedback de respostas |
+| **Recrutador** | `beatriz@demonstracao.com` | Processos seletivos, candidatos, painel de entrevista completo |
 
 ---
 
