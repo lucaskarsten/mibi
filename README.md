@@ -159,7 +159,7 @@ Privacidade de dados por design, não por configuração.
 
 ## ⚡ Acesse a demo
 
-URL: `https://demonstracao.rh.lucaskarsten.com.br` · Senha de todos os usuários: `lucas1`
+URL: `https://demonstracao.rh.lucaskarsten.com.br` · Senha de todos os usuários: `123456`
 
 | Perfil | Email | O que explorar |
 |---|---|---|
