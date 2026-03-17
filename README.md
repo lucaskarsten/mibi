@@ -14,6 +14,8 @@ Gerencie pessoas, conduza processos seletivos e responda dúvidas da equipe — 
 
 ![Painel principal do mibi](./screenshots/01-painel.png)
 
+> **Dados fictícios.** Todos os nomes, vagas, candidatos, métricas e conteúdos exibidos nas capturas de tela são gerados para fins de demonstração e não representam pessoas ou empresas reais.
+
 </div>
 
 ---
@@ -134,7 +136,7 @@ Privacidade de dados por arquitetura, não por configuração.
 | **Recrutador** | `beatriz@demonstracao.com` — processos, candidatos e entrevistas |
 | **Senha** | `123456` |
 
-> A demo usa currículos públicos reais como base, permitindo validar a análise de IA com conteúdo representativo.
+> Todos os dados do ambiente de demonstração — nomes, vagas, candidatos, métricas e conversas — são **inteiramente fictícios** e gerados para fins de teste. Não representam pessoas, empresas ou situações reais.
 
 ---
 
