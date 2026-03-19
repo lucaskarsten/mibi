@@ -2,45 +2,47 @@
 
 # mibi
 
-### A plataforma de RH que pensa com você
+### Inteligência artificial para o RH da sua empresa
 
-Gerencie pessoas, conduza processos seletivos e responda dúvidas da equipe — com **inteligência artificial integrada** e cada empresa no seu próprio ambiente isolado.
+Recrutamento estruturado, assistente de RH com IA e gestão de equipe — tudo em um ambiente isolado por empresa, com privacidade real e conformidade com a LGPD.
 
 <br />
 
-[![Demo ao vivo](https://img.shields.io/badge/▶%20Acessar%20demo-demonstracao.rh.lucaskarsten.com.br-6366f1?style=for-the-badge)](https://demonstracao.rh.lucaskarsten.com.br)
+[![Experimente grátis](https://img.shields.io/badge/▶%20Experimente%20agora-experimente.mibi.app.br-0d9488?style=for-the-badge)](https://experimente.mibi.app.br)
+&nbsp;&nbsp;
+[![Site](https://img.shields.io/badge/mibi.app.br-1e293b?style=for-the-badge)](https://mibi.app.br)
 
 <br />
 
 ![Painel principal do mibi](./screenshots/01-painel.png)
 
-> **Dados fictícios.** Todos os nomes, vagas, candidatos, métricas e conteúdos exibidos nas capturas de tela são gerados para fins de demonstração e não representam pessoas ou empresas reais.
+> **Dados fictícios.** Todos os nomes, vagas, candidatos e métricas nas capturas de tela são gerados para demonstração.
 
 </div>
 
 ---
 
-## O problema que o mibi resolve
+## Por que o mibi?
 
-Times de RH gastam horas respondendo as mesmas perguntas, acompanhando candidatos em planilhas e conduzindo entrevistas sem estrutura. O mibi centraliza tudo isso — e usa IA para automatizar o que pode ser automatizado.
+Times de RH perdem horas respondendo as mesmas perguntas, acompanhando candidatos em planilhas e conduzindo entrevistas sem estrutura. O mibi elimina esse retrabalho com IA integrada ao fluxo real de trabalho.
 
-Cada empresa opera em um **ambiente completamente isolado**: dados próprios, agentes configuráveis e histórico exclusivo. Sem compartilhamento entre organizações. Sem risco.
+Cada empresa opera em um **ambiente completamente isolado** — schema dedicado no banco, agentes próprios, dados que nunca se misturam com os de outra organização. Privacidade por arquitetura, não por configuração.
 
 ---
 
-## Para quem é
+## Para quem
 
-- **Times de RH** que querem escalar o atendimento sem aumentar a equipe
-- **Recrutadores** que precisam de mais estrutura e menos retrabalho em cada processo
-- **Empresas** que levam privacidade de dados a sério
+- **Times de RH** que querem escalar atendimento sem aumentar a equipe
+- **Recrutadores** que precisam de processo, não de planilhas
+- **Empresas** que levam privacidade de dados a sério e precisam de conformidade LGPD
 
 ---
 
 ## Assistente de RH com IA
 
-O colaborador pergunta, a IA responde — com contexto real da empresa: benefícios, políticas internas, férias, folha de pagamento. Sem abrir chamado. Sem esperar o RH.
+O colaborador pergunta, a IA responde — com o contexto real da empresa: benefícios, políticas internas, férias, folha de pagamento. Sem abrir chamado, sem esperar o RH.
 
-O assistente usa a base de conhecimento configurada pela própria empresa. Cada resposta inclui aviso legal e pode ser copiada com um clique. O colaborador ainda avalia com thumbs up/down — esse feedback alimenta o aprendizado contínuo do agente.
+O assistente usa a base de conhecimento configurada pela própria empresa. Cada resposta inclui aviso legal e pode ser copiada com um clique. O colaborador avalia com thumbs up/down — esse feedback alimenta o aprendizado contínuo do agente.
 
 ![Conversa com o Assistente de RH](./screenshots/02-chat.png)
 
@@ -50,19 +52,19 @@ Conversas podem ser salvas como **snapshots** com resumo gerado por IA, impressa
 
 ---
 
-## Módulo de Recrutamento
+## Recrutamento completo com IA
 
-Do processo aberto ao candidato contratado, tudo em um lugar só — com IA analisando em cada etapa.
+Do processo aberto ao candidato contratado — com inteligência artificial analisando em cada etapa.
 
 ### Visão geral do pipeline
 
-Acompanhe todos os candidatos ativos, entrevistas conduzidas, taxa de conversão e atividade recente em tempo real.
+Candidatos ativos, entrevistas conduzidas, taxa de conversão e atividade recente — tudo em tempo real.
 
 ![Dashboard de recrutamento com pipeline e atividade recente](./screenshots/04-pipeline.png)
 
 ### Score Mibi
 
-O mibi pontua candidatos automaticamente em três dimensões: **técnica**, **comportamental** e **holística** — com pesos configuráveis por processo. O score evolui conforme as etapas avançam: triagem, pós-entrevista e análise final por IA. O recrutador vê os melhores perfis de cada processo sem precisar ler currículo por currículo.
+O mibi pontua candidatos em três dimensões — **técnica**, **comportamental** e **holística** — com pesos configuráveis por processo. O score evolui conforme as etapas avançam: triagem, pós-entrevista e análise final por IA. O recrutador identifica os melhores perfis sem ler currículo por currículo.
 
 ![Ranking de candidatos por processo seletivo](./screenshots/05-top-candidatos.png)
 
@@ -76,7 +78,7 @@ Crie e gerencie processos com controle de status: `Aberto`, `Em espera`, `Encerr
 
 Cadastre, busque e filtre candidatos por status, etapa e data de entrevista. Upload de currículo com análise automática por IA — o sistema extrai dados estruturados e gera um parecer sem entrada manual.
 
-O ciclo de vida de cada candidato percorre: **Em processo → Entrevistado → Contratado / Reprovado / Desistiu**.
+Ciclo de vida: **Em processo → Entrevistado → Contratado / Reprovado / Desistiu**.
 
 ![Lista de candidatos com filtros e detalhes](./screenshots/07-candidatos.png)
 
@@ -86,99 +88,112 @@ Ambiente dedicado para conduzir entrevistas com estrutura. O recrutador vê o pe
 
 ![Painel de entrevista com avaliação por dimensões](./screenshots/08-entrevista.png)
 
-O cronômetro de sessão fica sempre visível. Ao concluir, o candidato avança para `Entrevistado` e o sistema oferece geração de resumo por IA.
+Cronômetro de sessão sempre visível. Ao concluir, o candidato avança para `Entrevistado` e o sistema oferece geração de resumo por IA.
 
 ---
 
 ## Agentes de IA configuráveis
 
-Cada empresa tem seus próprios agentes, baseados em templates globais que evoluem com o uso. O feedback dos colaboradores alimenta um sistema de digest anônimo — os agentes ficam mais inteligentes ao longo do tempo, sem comprometer privacidade.
+Cada empresa configura seus próprios agentes de IA, baseados em templates que evoluem com o uso. O feedback dos colaboradores alimenta um sistema de digest anônimo — os agentes ficam mais precisos sem comprometer a privacidade de ninguém.
 
-| Agente                     | O que faz                                                                |
-| -------------------------- | ------------------------------------------------------------------------ |
-| **Assistente de RH**       | Responde dúvidas sobre benefícios, férias, políticas e folha de pagamento |
-| **Assistente de Recrutamento** | Analisa candidatos, sugere perguntas e gera pareceres estruturados   |
-| **Assistente do Recrutador** | Apoia o recrutador durante entrevistas com contexto de preferências   |
-| **Digest do Recrutador**   | Processa preferências do recrutador em texto livre e as injeta nos demais agentes |
-| **Arena** *(em breve)*     | Compara candidatos lado a lado com análise aprofundada por IA            |
+| Agente | Função |
+| --- | --- |
+| **Assistente de RH** | Responde dúvidas sobre benefícios, férias, políticas internas e folha de pagamento |
+| **Assistente de Recrutamento** | Analisa candidatos, sugere perguntas e gera pareceres estruturados |
+| **Assistente do Recrutador** | Apoia o recrutador durante entrevistas com contexto de preferências |
+| **Digest do Recrutador** | Processa preferências do recrutador e as injeta nos demais agentes |
 
----
-
-## Multi-tenancy real
-
-Cada empresa possui um **schema dedicado no PostgreSQL**. Não há camada de compartilhamento — os dados de uma organização jamais se misturam com os de outra.
-
-```
-empresa_a.rh.app  →  schema isolado da empresa A
-empresa_b.rh.app  →  schema isolado da empresa B
-```
-
-Privacidade de dados por arquitetura, não por configuração.
+Todos os agentes incluem proteção contra prompt injection, anti-hallucination com frases de fallback, e protocolos para situações sensíveis (assédio, demissão, saúde, denúncias).
 
 ---
 
-## Compliance e LGPD
+## Privacidade e LGPD
 
-O mibi é **operador de dados** nos termos da LGPD — as empresas clientes são as controladoras. Essa distinção define as obrigações de cada parte.
+O mibi é **operador de dados** nos termos da LGPD. As empresas clientes são as controladoras — e essa distinção define toda a arquitetura.
 
-- **LGPD compliant** — exportação e anonimização de dados disponíveis para colaboradores e candidatos
-- **Aceite de termos** com versionamento no registro
-- **Geo-blocking** para regiões sem adequação regulatória (EU/EEA/UK)
-- **Audit log** de operações de IA e decisões sobre dados
-- **Disclaimer de IA** em todas as respostas geradas — toda decisão automatizada é passível de revisão humana
-- Documentação legal completa: [mibi-legal](https://github.com/lucaskarsten/mibi-legal)
+- **Isolamento real** — cada empresa tem schema PostgreSQL dedicado; zero compartilhamento entre tenants
+- **Retenção configurável** — cada empresa define por quanto tempo os dados de candidatos são mantidos
+- **Direitos do titular** — exportação e exclusão de dados pessoais
+- **Audit log** — registro de operações de IA e decisões sobre dados (LGPD Art. 20)
+- **Disclaimer de IA** — toda resposta gerada inclui aviso legal; decisões automatizadas são passíveis de revisão humana
+- **Aceite de termos** — versionado e registrado no onboarding
+
+Documentação legal completa: [mibi-legal](https://github.com/lucaskarsten/mibi-legal)
 
 ---
 
-## Acesse a demo
+## Planos
 
-|              |                                                                 |
-| ------------ | --------------------------------------------------------------- |
-| **URL**      | https://demonstracao.rh.lucaskarsten.com.br                     |
-| **Admin**    | `ana@demonstracao.com` — gestão de equipe, agentes e configurações |
-| **Membro**   | `rafael@demonstracao.com` — chat com assistente de RH           |
+|  | Free | Starter | Pro | Enterprise |
+| --- | --- | --- | --- | --- |
+| Funcionários | 5 | 25 | Ilimitado | Negociado |
+| Agentes IA | — | 1 | Todos | Customizados |
+| Processos seletivos | — | 2 ativos | Ilimitado | Ilimitado |
+| Painel de entrevistas | — | — | ✓ | ✓ |
+| SSO | — | — | — | ✓ |
+| White-label | — | — | — | ✓ |
+| Suporte | — | E-mail | Prioritário | Dedicado |
+
+Trial de 14 dias no Pro, sem cartão obrigatório. Pagamento mensal ou anual via Stripe (cartão, Pix, boleto).
+
+---
+
+## Experimente agora
+
+|  |  |
+| --- | --- |
+| **URL** | [experimente.mibi.app.br](https://experimente.mibi.app.br) |
+| **Admin** | `ana@demonstracao.com` — gestão de equipe, agentes e configurações |
+| **Membro** | `rafael@demonstracao.com` — chat com assistente de RH |
 | **Recrutador** | `beatriz@demonstracao.com` — processos, candidatos e entrevistas |
-| **Senha**    | `123456`                                                        |
+| **Senha** | `123456` |
 
-> Todos os dados do ambiente de demonstração — nomes, vagas, candidatos, métricas e conversas — são **inteiramente fictícios** e gerados para fins de teste.
+> Todos os dados do ambiente de teste são **fictícios** e gerados para demonstração.
 
 ---
 
 ## Roadmap
 
-| Funcionalidade                          | Status            |
-| --------------------------------------- | ----------------- |
-| Assistente de RH com IA                 | ✅ Em produção    |
-| Módulo de recrutamento                  | ✅ Em produção    |
-| Painel de entrevista                    | ✅ Em produção    |
-| Upload e análise de currículo por IA    | ✅ Em produção    |
-| Snapshots de conversa com resumo por IA | ✅ Em produção    |
-| Perfil de preferências do recrutador    | ✅ Em produção    |
-| Score Mibi (scoring por dimensões)      | ✅ Em produção    |
-| LGPD e compliance                       | ✅ Em produção    |
-| Mobile (chat, recrutamento, equipe)     | ✅ Em produção    |
-| Arena — comparação de candidatos por IA | 🔜 Em breve      |
-| Kanban do pipeline                      | 🔜 Em breve      |
-| Billing e planos (Stripe)               | 🔜 Em breve      |
-| Mobile completo (agentes, config)       | 🔜 Em breve      |
-| SSO (Google / Microsoft)                | 📅 v2            |
-| Dashboards analíticos                   | 📅 v2            |
-| Onboarding de colaboradores             | 📅 v2            |
+| Funcionalidade | Status |
+| --- | --- |
+| Assistente de RH com IA | ✅ Produção |
+| Módulo de recrutamento completo | ✅ Produção |
+| Painel de entrevista com timer e scoring | ✅ Produção |
+| Upload e análise de currículo por IA | ✅ Produção |
+| Score Mibi (técnico + comportamental + holístico) | ✅ Produção |
+| Snapshots de conversa com resumo por IA | ✅ Produção |
+| Perfil de preferências do recrutador | ✅ Produção |
+| LGPD e compliance | ✅ Produção |
+| Mobile (chat, recrutamento, equipe) | ✅ Produção |
+| Comparação de candidatos por IA (side-by-side) | 🔜 Em breve |
+| Painel de entrevistas em tempo real | 🔜 Em breve |
+| Billing e planos self-service (Stripe) | 🔜 Em breve |
+| Endpoints LGPD (exportação e exclusão de dados) | 🔜 Em breve |
+| Agente do colaborador (canal direto com a IA) | 📅 Planejado |
+| SSO (SAML / OpenID Connect) | 📅 Planejado |
+| Dashboards analíticos | 📅 Planejado |
+| Onboarding de colaboradores | 📅 Planejado |
+| White-label | 📅 Planejado |
+
+Roadmap completo: [ROADMAP.md](ROADMAP.md)
 
 ---
 
 ## Stack
 
-| Camada               | Tecnologia                          |
-| -------------------- | ----------------------------------- |
-| **Frontend / Backend** | Next.js 16 · React 19 · JavaScript |
-| **Banco (dev)**      | PostgreSQL local via Docker         |
-| **Banco (produção)** | NeonDB (serverless Postgres)        |
-| **IA**               | Claude Sonnet (Anthropic)           |
-| **Hospedagem**       | Vercel                              |
+| Camada | Tecnologia |
+| --- | --- |
+| Frontend / Backend | Next.js · JavaScript · Pages Router |
+| Banco (produção) | PostgreSQL (Neon) |
+| Banco (dev) | PostgreSQL local |
+| Multi-tenancy | Schema isolado por empresa via `proxy.js` |
+| IA | Claude (Anthropic) |
+| Design tokens | `theme.css` + Tailwind |
+| API | API-first com Swagger |
+| Hospedagem | Vercel + Git CI |
 
-Repositório técnico: [lucaskarsten/mibi-core](https://github.com/lucaskarsten/mibi-core)
+Repositório técnico (privado): [lucaskarsten/mibi-core](https://github.com/lucaskarsten/mibi-core)
 
 ---
 
-Desenvolvido por **Lucas Karsten**
+Desenvolvido por **Lucas Karsten** · [mibi.app.br](https://mibi.app.br)
