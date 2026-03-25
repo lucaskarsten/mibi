@@ -64,7 +64,7 @@ Candidatos ativos, entrevistas conduzidas, taxa de conversão e atividade recent
 
 ### Score Mibi
 
-O mibi pontua candidatos em três dimensões — **técnica**, **comportamental** e **holística** — com pesos configuráveis por processo. O score evolui conforme as etapas avançam: triagem, pós-entrevista e análise final por IA. O recrutador identifica os melhores perfis sem ler currículo por currículo.
+O mibi pontua candidatos em quatro dimensões — **técnica**, **comportamental**, **holística** e **logística** — com pesos configuráveis por processo. O score evolui conforme as etapas avançam: triagem, pós-entrevista e análise final por IA. O recrutador identifica os melhores perfis sem ler currículo por currículo.
 
 ![Ranking de candidatos por processo seletivo](./screenshots/05-top-candidatos.png)
 
@@ -113,28 +113,38 @@ O mibi é **operador de dados** nos termos da LGPD. As empresas clientes são as
 
 - **Isolamento real** — cada empresa tem schema PostgreSQL dedicado; zero compartilhamento entre tenants
 - **Retenção configurável** — cada empresa define por quanto tempo os dados de candidatos são mantidos
-- **Direitos do titular** — exportação e exclusão de dados pessoais
+- **Direitos do titular** — exportação e anonimização de dados pessoais (colaboradores e candidatos)
 - **Audit log** — registro de operações de IA e decisões sobre dados (LGPD Art. 20)
 - **Disclaimer de IA** — toda resposta gerada inclui aviso legal; decisões automatizadas são passíveis de revisão humana
 - **Aceite de termos** — versionado e registrado no onboarding
+- **Geo-blocking** — signup bloqueado para EU/EEA/UK (GDPR)
 
 Documentação legal completa: [mibi-legal](https://github.com/lucaskarsten/mibi-legal)
 
 ---
 
-## Planos
+## Planos e preços
 
 |  | Free | Starter | Pro | Enterprise |
 | --- | --- | --- | --- | --- |
-| Funcionários | 5 | 25 | Ilimitado | Negociado |
-| Agentes IA | — | 1 | Todos | Customizados |
-| Processos seletivos | — | 2 ativos | Ilimitado | Ilimitado |
-| Painel de entrevistas | — | — | ✓ | ✓ |
-| SSO | — | — | — | ✓ |
-| White-label | — | — | — | ✓ |
-| Suporte | — | E-mail | Prioritário | Dedicado |
+| **Preço** | R$0 | R$250/mês | R$600/mês | Sob consulta |
+| **Desconto anual** | — | 15% (R$212,50/mês) | 15% (R$510/mês) | Negociado |
+| **Colaboradores** | 5 | 25 | Ilimitado | Negociado |
+| **Mensagens IA/mês** | 50 | 300 | 1.500 | Ilimitado |
+| **Análises de CV/mês** | 10 | 80 | 300 | Ilimitado |
+| **Entrevistas com IA/mês** | 3 | 15 | Ilimitado | Ilimitado |
+| **Processos seletivos** | 1 | 3 ativos | Ilimitado | Ilimitado |
+| **Agentes customizados** | — | 1 | Todos | Customizados |
+| **Arena (comparação IA)** | — | — | ✓ | ✓ |
+| **Chat do recrutador** | — | — | ✓ | ✓ |
+| **SSO** | — | — | — | ✓ |
+| **API key própria** | — | — | — | ✓ |
+| **Suporte** | Docs | E-mail | Prioritário | Dedicado |
 
-Trial de 14 dias no Pro, sem cartão obrigatório. Pagamento mensal ou anual via Stripe (cartão, Pix, boleto).
+- **Free** expira após 3 meses — precisa de upgrade ou perde acesso
+- **Trial Pro:** 7 dias com cartão — cobra automaticamente se não cancelar
+- Excedentes: hard block com alertas a 50% e 80% do uso
+- Pagamento via Stripe: cartão, Pix e boleto
 
 ---
 
@@ -143,10 +153,10 @@ Trial de 14 dias no Pro, sem cartão obrigatório. Pagamento mensal ou anual via
 |  |  |
 | --- | --- |
 | **URL** | [experimente.mibi.app.br](https://experimente.mibi.app.br) |
-| **Admin** | `ana@demonstracao.com` — gestão de equipe, agentes e configurações |
+| **Admin (owner)** | `ana@demonstracao.com` — gestão de equipe, agentes, billing e configurações |
 | **Membro** | `rafael@demonstracao.com` — chat com assistente de RH |
 | **Recrutador** | `beatriz@demonstracao.com` — processos, candidatos e entrevistas |
-| **Senha** | `123456` |
+| **Senha** | `Mibi1234` |
 
 > Todos os dados do ambiente de teste são **fictícios** e gerados para demonstração.
 
@@ -160,22 +170,19 @@ Trial de 14 dias no Pro, sem cartão obrigatório. Pagamento mensal ou anual via
 | Módulo de recrutamento completo | ✅ Produção |
 | Painel de entrevista com timer e scoring | ✅ Produção |
 | Upload e análise de currículo por IA | ✅ Produção |
-| Score Mibi (técnico + comportamental + holístico) | ✅ Produção |
+| Score Mibi (4 dimensões com pesos configuráveis) | ✅ Produção |
 | Snapshots de conversa com resumo por IA | ✅ Produção |
 | Perfil de preferências do recrutador | ✅ Produção |
-| LGPD e compliance | ✅ Produção |
+| LGPD e compliance (exportação, anonimização, audit log) | ✅ Produção |
 | Mobile (chat, recrutamento, equipe) | ✅ Produção |
-| Comparação de candidatos por IA (side-by-side) | 🔜 Em breve |
-| Painel de entrevistas em tempo real | 🔜 Em breve |
-| Billing e planos self-service (Stripe) | 🔜 Em breve |
-| Endpoints LGPD (exportação e exclusão de dados) | 🔜 Em breve |
-| Agente do colaborador (canal direto com a IA) | 📅 Planejado |
-| SSO (SAML / OpenID Connect) | 📅 Planejado |
+| Billing e planos self-service (Stripe) | ✅ Produção |
+| Signup com verificação de e-mail e onboarding | ✅ Produção |
+| Painel da empresa (billing, configurações) | ✅ Produção |
+| Comparação de candidatos por IA (arena) | 🔜 Em breve |
 | Dashboards analíticos | 📅 Planejado |
 | Onboarding de colaboradores | 📅 Planejado |
+| SSO (SAML / OpenID Connect) | 📅 Planejado |
 | White-label | 📅 Planejado |
-
-Roadmap completo: [ROADMAP.md](ROADMAP.md)
 
 ---
 
@@ -185,15 +192,15 @@ Roadmap completo: [ROADMAP.md](ROADMAP.md)
 | --- | --- |
 | Frontend / Backend | Next.js · JavaScript · Pages Router |
 | Banco (produção) | PostgreSQL (Neon) |
-| Banco (dev) | PostgreSQL local |
 | Multi-tenancy | Schema isolado por empresa via `proxy.js` |
 | IA | Claude (Anthropic) |
 | Design tokens | `theme.css` + Tailwind |
-| API | API-first com Swagger |
-| Hospedagem | Vercel + Git CI |
+| API | 114 endpoints REST com Swagger |
+| Billing | Stripe (subscriptions, checkout, portal) |
+| Hospedagem | Vercel + GitHub Actions CI |
 
 Repositório técnico (privado): [lucaskarsten/mibi-core](https://github.com/lucaskarsten/mibi-core)
 
 ---
 
-Desenvolvido por **Lucas Karsten** · [mibi.app.br](https://mibi.app.br)
+Desenvolvido por **Lucas Karsten** · [mibi.app.br](https://mibi.app.br) · [contato@mibi.app.br](mailto:contato@mibi.app.br)
